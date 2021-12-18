@@ -6,7 +6,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "node ./server/bin/www",
+    "start": "node ./server/bin/www"
     
   },
   "dependencies": {
