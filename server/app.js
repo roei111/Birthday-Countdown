@@ -33,10 +33,11 @@ const app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
 
+const secret = process.env.SECRET;
 
 const store = MongoStore.create({
   mongoUrl: dbUrl,
-  secret: "secret",
+  secret: secret,
   touchAfter: 24 * 60 * 60,
 });
 
@@ -46,7 +47,7 @@ store.on("error", function (e) {
 
 const sessionConfig = {
   store,
-  secret: "secret",
+  secret: secret,
   resave: false,
   saveUninitialized: true,
   cookie: {
