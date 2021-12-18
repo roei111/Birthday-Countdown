@@ -17,7 +17,6 @@ const usersRouter = require("./routes/users");
 const groupsRouter = require("./routes/groups");
 
 const dbUrl = process.env.DB_URL;
-// "mongodb://localhost:27017/Birthday-Countdown"
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -75,19 +74,6 @@ app.use(function (req, res, next) {
 
 app.use((err, req, res, next) => {
   let message = err.message;
-  console.log(err.name);
-  console.log("error message: ", message);
-  if (err.name === "UserExistsError")
-    message = "שם המשתמש נמצא בשימוש, אנא בחר שם משתמש אחר";
-  if (err.code && err.code == 11000) {
-    const [field] = Object.keys(err.keyValue);
-    console.log(field);
-    field === "email"
-      ? (message = "כתובת המייל נמצאת בשימוש, אנא בחר כתובת מייל אחרת")
-      : (message = "שם המשתמש נמצא בשימוש, אנא בחר שם משתמש אחר");
-  }
-  // const { statusCode = err.code || 500} = err;
-
   if (!err.message) err.message = "קרתה בעיה, נסה שוב מאוחר יותר.";
   res.send(message);
 });

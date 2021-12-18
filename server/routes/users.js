@@ -1,6 +1,4 @@
 var express = require("express");
-const passport = require("passport");
-const user = require("../models/user");
 var router = express.Router();
 const User = require("../models/user");
 const catchAsync = require("../utils/catchAsync");
@@ -33,31 +31,12 @@ router.post(
       res.status(400);
       throw new Error("נתוני משתמש לא חוקיים");
     }
-
-    // const {_id} = await User.register(user, password);
-    // return res.json({_id, email, username});
   })
 );
 
 router.post(
   "/login",
   catchAsync(async (req, res, next) => {
-    // passport.authenticate("local", (err, user, info) => {
-    //   if (err) {
-    //     return next(err);
-    //   }
-    //   if (!user) {
-    //     return res.status(500).end();
-    //   }
-    //   req.logIn(user, (err) => {
-    //     if (err) {
-    //       return next(err);
-    //     }
-    //     const { _id, email, username } = req.user;
-    //     const connectedUserData={_id,email,username}
-    //     return res.json(connectedUserData);
-    //   });
-    // })(req, res, next);
     const { username, password } = req.body;
     const user = await User.findOne({ username });
     if (user && (await user.matchPassword(password))) {
