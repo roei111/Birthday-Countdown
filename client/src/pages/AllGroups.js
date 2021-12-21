@@ -40,7 +40,7 @@ const AllGroups = () => {
   return (
     <>
       <Loader isLoading={isLoading} />
-      <Container fixed sx={{ mt: 5 }}>
+      <Container fixed sx={{ mt: 5, height: "100vh" }}>
         <GroupsList />
         <FormAddGroup />
       </Container>

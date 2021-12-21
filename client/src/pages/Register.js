@@ -3,7 +3,7 @@ import { Container } from "@mui/material";
 
 const Register = () => {
   return (
-    <Container fixed sx={{ mt: 5 }}>
+    <Container fixed sx={{ mt: 5, height: "100vh" }}>
       <RegisterForm />
     </Container>
   );
