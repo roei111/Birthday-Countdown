@@ -27,7 +27,7 @@ const AllGroupMembers = () => {
           }
         );
         if (!response.ok) {
-          throw new Error("העלאת המידע מהשרת נכשלה!");
+          throw new Error("העלאת המידע מהשרת נכשלה! ");
         }
         const data = await response.json();
         dispatch(groupMembersActions.addAllGroupMembers(data.groupmembers));
