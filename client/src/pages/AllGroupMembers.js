@@ -14,6 +14,7 @@ const AllGroupMembers = () => {
   const { groupId } = params;
   const [isLoading, setIsLoading] = useState(false);
   useEffect(() => {
+    window.scrollTo(0, 0);
     const fetchData = async () => {
       try {
         setIsLoading(true);

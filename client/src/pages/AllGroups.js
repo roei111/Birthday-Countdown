@@ -14,6 +14,7 @@ const AllGroups = () => {
     dispatch(groupMembersActions.removeAllGroupMembers([]));
     dispatch(groupMembersActions.closeEdit());
     const fetchData = async () => {
+      window.scrollTo(0, 0);
       try {
         setIsLoading(true);
         const response = await fetch(`/api/groups`,{
