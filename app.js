@@ -69,9 +69,9 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-app.use("/groupmembers", groupmembersRouter);
-app.use("/users", usersRouter);
-app.use("/groups", groupsRouter);
+app.use("/api/groupmembers", groupmembersRouter);
+app.use("/api/users", usersRouter);
+app.use("/api/groups", groupsRouter);
 
 app.use(function (req, res, next) {
   next(createError(404));
