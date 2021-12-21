@@ -20,7 +20,7 @@ const FormEditGroup = (props) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        `http://localhost:9000/groups/${props.groupId}`,
+        `/api/groups/${props.groupId}`,
         {
           method: "PUT",
           body: JSON.stringify({

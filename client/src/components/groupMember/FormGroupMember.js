@@ -92,8 +92,8 @@ const FormGroupMember = (props) => {
       setIsLoading(true);
       const response = await fetch(
         isEditing
-          ? `http://localhost:9000/groupmembers/${props.groupId}/${editGroupMemberId}`
-          : `http://localhost:9000/groupmembers/${props.groupId}`,
+          ? `/api/groupmembers/${props.groupId}/${editGroupMemberId}`
+          : `/api/groupmembers/${props.groupId}`,
         {
           method: isEditing ? "PUT" : "POST",
           body: formData,

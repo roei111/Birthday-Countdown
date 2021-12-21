@@ -18,7 +18,7 @@ const GroupMembersList = (props) => {
       setIsLoading(true);
       setDeleteId(groupMemberId);
       const response = await fetch(
-        `http://localhost:9000/groupmembers/${groupId}/${groupMemberId}`,
+        `/api/groupmembers/${groupId}/${groupMemberId}`,
         {
           method: "DELETE",
           headers: {

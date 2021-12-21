@@ -19,7 +19,7 @@ const FormAddGroup = () => {
     const { groupName } = data;
     try {
       setIsLoading(true);
-      const response = await fetch(`http://localhost:9000/groups`, {
+      const response = await fetch(`/api/groups`, {
         method: "POST",
         body: JSON.stringify({
           groupName,

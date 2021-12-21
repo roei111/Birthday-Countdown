@@ -16,7 +16,7 @@ const AllGroups = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch(`http://localhost:9000/groups`,{
+        const response = await fetch(`/api/groups`,{
           headers: {
             Authorization: `Bearer ${userData.token}`,
           },

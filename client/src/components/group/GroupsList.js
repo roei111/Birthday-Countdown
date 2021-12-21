@@ -33,7 +33,7 @@ const GroupsList = () => {
       setIsLoading(true);
       setDeleteId(groupId);
       const response = await fetch(
-        `http://localhost:9000/groups/${groupId}`,
+        `/api/groups/${groupId}`,
         {
           method: "DELETE",
           headers: {
