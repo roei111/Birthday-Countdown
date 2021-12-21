@@ -62,7 +62,7 @@ const FormGroupMember = (props) => {
     setValue("gender", editGender || "");
     setValue("birthday", editBirthday || null);
     setValue("editImage", editImage || null);
-    setValue("removeOldImage", removeOldImage || null);
+    setValue("removeOldImage", removeOldImage);
   }, [
     setValue,
     editFirstName,

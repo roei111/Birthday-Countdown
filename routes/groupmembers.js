@@ -80,25 +80,24 @@ router.put(
   upload.single("image"),
   catchAsync(async (req, res) => {
     const { groupId, groupMemberId } = req.params;
-    const { firstName, lastName, birthday, gender, editImage, removeOldImage } = req.body;
+    const { firstName, lastName, birthday, gender, editImage, removeOldImage } =
+      req.body;
     const age = new Date().getFullYear() - new Date(birthday).getFullYear();
     const image = JSON.parse(editImage[0]); //old image
     let imageData;
     if (req.file) {
-      if(image){
-        await cloudinary.uploader.destroy(image.fileName)
+      if (image) {
+        await cloudinary.uploader.destroy(image.fileName);
       }
       imageData = { url: req.file.path, fileName: req.file.filename };
     } else {
       if (!image) {
         imageData = null;
-      }
-      else{
-        if(removeOldImage){
-          await cloudinary.uploader.destroy(image.fileName)
+      } else {
+        if (removeOldImage === "true") {
+          await cloudinary.uploader.destroy(image.fileName);
           imageData = null;
-        }
-        else{
+        } else {
           imageData = { url: image.url, fileName: image.fileName };
         }
       }
