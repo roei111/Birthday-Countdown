@@ -15,6 +15,7 @@ import {
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 import CancelIcon from "@mui/icons-material/Cancel";
+import LaunchIcon from "@mui/icons-material/Launch";
 import LoadingButton from "@mui/lab/LoadingButton";
 import FormEditGroup from "./FormEditGroup";
 import ConfirmDialog from "../../ui/ConfirmDialog";
@@ -32,16 +33,13 @@ const GroupsList = () => {
     try {
       setIsLoading(true);
       setDeleteId(groupId);
-      const response = await fetch(
-        `/api/groups/${groupId}`,
-        {
-          method: "DELETE",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${userData.token}`,
-          },
-        }
-      );
+      const response = await fetch(`/api/groups/${groupId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${userData.token}`,
+        },
+      });
 
       if (!response.ok) {
         throw new Error("ישנה בעיה עם מחיקת הרשימה, נסה שוב מאוחר יותר.");
@@ -85,8 +83,22 @@ const GroupsList = () => {
                   to={`/groupmembers/${group._id}`}
                 >
                   <CardContent>
-                    <Typography gutterBottom variant="h5" component="div">
+                    <Typography
+                      gutterBottom
+                      variant="h5"
+                      component="div"
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    >
                       {group.groupName}
+                      <LaunchIcon
+                        color="primary"
+                        sx={{
+                          marginLeft: 1,
+                        }}
+                      />
                     </Typography>
                   </CardContent>
                 </CardActionArea>

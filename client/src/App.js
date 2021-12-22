@@ -7,7 +7,6 @@ import Notification from "./ui/Notification";
 import DateAdapter from "@mui/lab/AdapterDayjs";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import { ThemeProvider } from "@mui/styles";
-// import { Typography } from "@mui/material";
 import CustomTheme from "./themes/CustomTheme";
 import Register from "./pages/Register";
 import AllGroupMembers from "./pages/AllGroupMembers";
@@ -60,17 +59,6 @@ const App = () => {
               <NotFound />
             </Route>
           </Switch>
-{/* 
-          <footer style={{ backgroundColor: "#404040", marginTop: "30px", bottom: 0, width: "100%"}}>
-            <Typography
-              variant="body1"
-              color="#A0A0A0"
-              textAlign="center"
-              paddingY="20px"
-            >
-              2021 Roei Yaacobi ©
-            </Typography>
-          </footer> */}
         </div>
       </LocalizationProvider>
     </ThemeProvider>
