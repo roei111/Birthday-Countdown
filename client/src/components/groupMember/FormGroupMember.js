@@ -284,6 +284,7 @@ const FormGroupMember = (props) => {
                 fieldState: { error },
               }) => (
                 <DatePicker
+                  views={["year", "month", "day"]}
                   onChange={onChange}
                   value={value}
                   fullWidth
