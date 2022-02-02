@@ -20,6 +20,11 @@ const LoginForm = () => {
   });
   let history = useHistory();
 
+  const handleGuestLogin =()=>{
+    const guestUser = {username: "אורח", password: "demo123"}
+    sumbitHandler(guestUser);
+  }
+
   const sumbitHandler = async (data) => {
     const { username, password } = data;
     try {
@@ -39,7 +44,7 @@ const LoginForm = () => {
         throw new Error("שם המשתמש או הסיסמה אינם נכונים");
       }
       const Data = await serverResponse.json();
-      dispatch(userActions.login({userData: Data}));
+      dispatch(userActions.login({ userData: Data }));
       setIsLoading(false);
       dispatch(
         uiActions.showNotification({
@@ -120,6 +125,14 @@ const LoginForm = () => {
             type="sumbit"
           >
             התחבר
+          </LoadingButton>
+          <LoadingButton
+            loading={isLoading}
+            variant="contained"
+            color="primary"
+            onClick={handleGuestLogin}
+          >
+            התחבר בתור אורח
           </LoadingButton>
           <Typography variant="subtitle1" textAlign="center">
             עדיין איך לך משתמש?

@@ -35,7 +35,7 @@ const Home = () => {
 
         <Button
           component={Link}
-          to={isLoggedIn ? "/groups" : "/register"}
+          to={isLoggedIn ? "/groups" : "/login"}
           color="primary"
           variant="contained"
           size="large"
