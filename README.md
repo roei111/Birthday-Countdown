@@ -1,6 +1,15 @@
-# Birthday Organizer
+# Birthday Organizer - Platform built with the MERN stack
 
-> Platform built with the MERN stack.
+<h4>A platform that organizes birthdays by groups, and counts down to the dates</h4>
+
+<img src="client/public/ogImage.png">
+<p align="center">
+  <img src="client/public/mockup.png" height="700">
+  <img src="client/public/mockupLogin.png" height="700">
+</p>
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=8yuLlZgGuRs"><img src="client/public/youtube-embed.png" alt="Birthday Organizer - Roei Yaacobi - Youtube Video"></a>
+</p>
 
 ## Website
 
