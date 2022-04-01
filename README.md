@@ -1,6 +1,6 @@
 # Birthday Organizer - Platform built with the MERN stack
 
-<h4>A platform that organizes birthdays by groups, and counts down to the dates</h4>
+<h4>A platform that organizes birthdays by groups, and counts down to the dates. It has cool features like authentication, authorization, single-page application, responsive design, full CRUD operations & upload photos.</h4>
 
 <img src="client/public/ogImage.png">
 <p align="center">
