@@ -7,9 +7,8 @@
   <img src="client/public/mockup.png" height="700">
   <img src="client/public/mockupLogin.png" height="700">
 </p>
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=8yuLlZgGuRs"><img src="client/public/youtube-embed.png" alt="Birthday Organizer - Roei Yaacobi - Youtube Video"></a>
-</p>
+
+https://user-images.githubusercontent.com/71691473/185810071-d7fe42c6-489d-44e7-8c52-d3840915d964.mp4
 
 ## Website
 
