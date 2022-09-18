@@ -3,10 +3,8 @@
 <h4>A platform that organizes birthdays by groups, and counts down to the dates. It has cool features like authentication, authorization, single-page application, responsive design, full CRUD operations & upload photos.</h4>
 
 <img src="https://res.cloudinary.com/dq6iduc79/image/upload/v1662312112/portfolio-avif/12954066_PSDnonB_Feb271_zr7zlc.png">
-<p align="center">
-  <img src="client/public/mockup.png" height="700">
-  <img src="client/public/mockupLogin.png" height="700">
-</p>
+
+![mobile](https://user-images.githubusercontent.com/71691473/190928904-c82c2e69-cfb7-4328-862d-ad1f8ae4f00d.png)
 
 https://user-images.githubusercontent.com/71691473/185810071-d7fe42c6-489d-44e7-8c52-d3840915d964.mp4
 
